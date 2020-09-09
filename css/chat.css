@@ -1,0 +1,306 @@
+/*This is css file for chat page*/
+
+.app {
+  /*display: flex;*/
+  display: none;
+  width: 70%;
+  height: 80%;
+  -webkit-box-shadow: -1px -1px 32px -4px rgba(0, 0, 0, 0.64);
+  -moz-box-shadow: -1px -1px 32px -4px rgba(0, 0, 0, 0.64);
+  box-shadow: -1px -1px 32px -4px rgba(0, 0, 0, 0.64);
+  padding: 0;
+  border: 1px solid #2b2e36;
+  border-radius: 5px;
+  position: absolute;
+  left: 15%;
+  top: 10%;
+  /*hide scrollbar in IE*/
+  -ms-overflow-style:none;
+  /*hide scrollbar in firwfox*/
+  overflow-y:-moz-scrollbars-none;
+}
+
+.left-side {
+  width: 30%;
+  background-color: #2b2e36;
+  border-right: 1px solid grey;
+}
+.left-side .user-wrapper {
+  width: 100%;
+  height: 15%;
+  display: flex;
+}
+.user-wrapper .user-avatar {
+  width: 40%;
+  height: 100%;
+}
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+}
+.user-wrapper .user-name {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.other-users-wrapper {
+  height: 85%;
+  width: 100%;
+}
+.other-users-wrapper .list-group {
+  height: 100%;
+  display: flex;
+  width: 100%;
+}
+.other-user-wrapper {
+  display: flex;
+  height: auto;
+  background-color: #2b2e36;
+  color: white;
+  border: 1px solid black;
+  border-radius: 15px;
+  -webkit-box-shadow: -1px -1px 32px -4px rgba(0, 0, 0, 0.64);
+  -moz-box-shadow: -1px -1px 32px -4px rgba(0, 0, 0, 0.64);
+  box-shadow: -1px -1px 32px -4px rgba(0, 0, 0, 0.64);
+  font-style: italic;
+  transition: all 0.1s;
+}
+.other-user-wrapper:hover {
+  border-radius: 20px;
+  border: 3px solid #17c426;
+  font-style: normal;
+  font-weight: 800;
+}
+.current-select{
+  background-color:rgb(153, 142, 142);
+  border: 2px solid black; 
+  font-style: normal;
+  font-weight: 600;
+}
+.other-user-wrapper:hover .other-user-avatar {
+  width: 45px;
+  height: 45px;
+}
+.other-user-avatar {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+}
+.other-user-avatar img {
+  width: 100%;
+  height: 100%;
+}
+.other-user-name {
+  width: 80%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-side {
+  width: 70%;
+  background-color: antiquewhite;
+}
+
+.header button:focus{
+    outline: 0;
+}
+.header button:hover{
+  color: white;
+}
+.right-side .header {
+  width: 100%;
+  height: 15%;
+  background-color: #2b2e36;
+  color: white;
+  font-style: italic;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: flex-start;
+  border-bottom:1px solid grey;
+}
+.header .current-chatter {
+  width: 95%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-side .chat-window {
+  width: 100%;
+  height: 60%;
+  background-color: #3e414a;
+  padding-top: 2%;
+  overflow-y: scroll;
+}
+.chat-window .system-message{
+  width: 100%;
+  margin-bottom: 2%;
+  height: auto;
+  text-align: center;
+  color: grey;
+  font-size: 70%;
+}
+.chat-window::-webkit-scrollbar {
+  width: 10px;
+}
+
+.chat-window::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgba(100, 100, 100, 0.7);
+}
+
+
+
+.chat-window .current-chatter-wrapper {
+  width: 70%;
+  height: auto;
+  margin-bottom: 2%;
+  display: flex;
+  float: left;
+}
+.current-chatter-wrapper .chatter-avatar {
+  width: 42px;
+  height: 42px;
+
+  margin-right: 10px;
+}
+.chatter-avatar img {
+  width: 100%;
+  height: 100%;
+  float: right;
+}
+.current-chatter-wrapper .chatter-message {
+  width: auto;
+  max-width: 80%;
+  margin-left: 0%;
+  min-height: 42px;
+  line-height: 35px;
+  height: auto;
+  background-color: rgb(78, 206, 223);
+  border: 2px solid black;
+  -webkit-box-shadow: -1px -1px 32px -4px rgba(0, 0, 0, 0.64);
+  -moz-box-shadow: -1px -1px 32px -4px rgba(0, 0, 0, 0.64);
+  box-shadow: -1px -1px 32px -4px rgba(0, 0, 0, 0.64);
+}
+
+
+.chat-window .me-wrapper {
+  width: 70%;
+  height: auto;
+  margin-bottom: 2%;
+  display: flex;
+  float: right;
+  position: relative;
+  left: 1%;
+  justify-content: flex-end;
+}
+
+.me-wrapper .me-message {
+  -webkit-box-shadow: -1px -1px 32px -4px rgba(0, 0, 0, 0.64);
+  -moz-box-shadow: -1px -1px 32px -4px rgba(0, 0, 0, 0.64);
+  box-shadow: -1px -1px 32px -4px rgba(0, 0, 0, 0.64);
+  width: auto;
+  max-width: 80%;
+  min-height: 42px;
+  height: auto;
+  line-height: 35px;
+  background-color: gold;
+  margin-right: 10px;
+  border: 2px solid black;
+}
+.me-wrapper .me-avatar {
+  width: 42px;
+  height: 42px;
+}
+.me-avatar img {
+  width: 100%;
+  height: 100%;
+}
+.right-side .user-function {
+  padding-top: 2px;
+  padding-bottom: 1px;
+  width: 100%;
+  height: 5%;
+  background-color: #2b2e36;
+  border-top: 1px solid grey;
+  display: flex;
+  border-bottom: 1px solid grey;
+}
+
+.user-function .emoji {
+  height: 100%;
+  width: auto;
+  line-height: 100%;
+  margin-left: 2%;
+}
+
+.emoji img {
+  height: 23px;
+  width: 23px;
+  opacity: 0.7;
+  filter:alpha(opacity=70);       /* IE */
+  -moz-opacity:0.7;              /* old Mozilla */
+  -khtml-opacity:0.7;
+}
+.emoji img:hover{
+  opacity: 1;
+  filter:alpha(opacity=100);       /* IE */
+  -moz-opacity:1;              /* old Mozilla */
+  -khtml-opacity:1;
+}
+.user-function .local-file {
+  height: 100%;
+  width: auto;
+  line-height: 100%;
+  margin-left: 3%;
+  
+}
+.local-file img {
+  height: 22px;
+  width: 22px;
+  opacity: 0.7;
+  filter:alpha(opacity=70);       /* IE */
+  -moz-opacity:0.7;              /* old Mozilla */
+  -khtml-opacity:0.7;
+  position: relative;
+  
+}
+.local-file img:hover {
+  opacity: 1;
+  filter:alpha(opacity=100);       /* IE */
+  -moz-opacity:1;              /* old Mozilla */
+  -khtml-opacity:1;
+}
+.right-side .user-input {
+  width: 100%;
+  height: 20%;
+  background-color: #3e414a;
+}
+.user-input .user-text {
+  padding: 1% 1% 1% 1%;
+  height: 65%;
+  color: white;
+  outline: none;
+  overflow-y: scroll;
+}
+.user-input .user-text::-webkit-scrollbar {
+  width: 10px;
+}
+
+.user-input .user-text::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgba(100, 100, 100, 0.7);
+}
+
+.user-input .btn {
+  height: 2%;
+  float: right;
+  margin-right: 2%;
+  padding: 0.225rem 0.225rem;
+}

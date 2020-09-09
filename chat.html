@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hugo Chat</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/chat.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/communicate.js"></script>
+    <script src="./js//logout.js"></script>
+    <script src="./js//onload.js"></script>
+  </head>
+  <body>
+    <div class="login-window container">
+      <div class="login-avatar">
+        <img src="./image/superman.png" alt="..." />
+      </div>
+      <div class="login-name" id="login-name">
+        <label for="username">Username:</label>
+        <input type="text" id="username" />
+      </div>
+      <div class="avatar-options container">
+        <img src="./image/superman.png" class="avatar-test" alt="..." />
+        <img src="./image/spider man.png" alt="..." />
+        <img src="./image/hulk.png" alt="..." />
+        <img src="./image/iron.png" alt="..." />
+      </div>
+    </div>
+    <div class="connect-btn">
+      <button type="button" class="btn btn-primary btn-lg ">Connect</button>
+    </div>
+
+    <div class="app container">
+      <div class="left-side">
+        <div class="user-wrapper">
+          <div class="user-avatar">
+            <img src="./image/superman.png" alt="no image..." />
+          </div>
+          <div class="user-name">Hugo</div>
+        </div>
+        <div class="other-users-wrapper">
+          <ul class="list-group">
+            <li class="list-group-item other-user-wrapper">
+              <div class="other-user-avatar">
+                <img src="./image/superman.png" alt="no image..." />
+              </div>
+              <div class="other-user-name">superman</div>
+            </li>
+            <li class="list-group-item other-user-wrapper">
+              <div class="other-user-avatar">
+                <img src="./image/iron.png" alt="no image..." />
+              </div>
+              <div class="other-user-name">Iron Man</div>
+            </li>
+            <li class="list-group-item other-user-wrapper">
+              <div class="other-user-avatar">
+                <img src="./image/hulk.png" alt="no image..." />
+              </div>
+              <div class="other-user-name">hulk</div>
+            </li>
+            <li class="list-group-item other-user-wrapper">
+              <div class="other-user-avatar">
+                <img src="./image/spider man.png" alt="no image..." />
+              </div>
+              <div class="other-user-name">Spider Man</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="header">
+          <div class="current-chatter">Iron Man</div>
+          <button
+            id="log-out"
+            type="button"
+            class="close"
+            data-dismiss="alert"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="chat-window container">
+          <div class="system-message">
+            Conversation starts ! Say Hi to Iron Man.
+          </div>
+          <div class="system-message">11:05PM, 7/14/2019</div>
+          <div class="current-chatter-wrapper">
+            <div class="chatter-avatar">
+              <img src="./image/iron.png" alt="..." />
+            </div>
+            <div class="chatter-message container">Hello, how are you?</div>
+          </div>
+          <div class="me-wrapper">
+            <div class="me-message container">I am fine! Thank you!</div>
+            <div class="me-avatar">
+              <img src="./image/superman.png" alt="..." />
+            </div>
+          </div>
+          <div class="me-wrapper">
+            <div class="me-message container">What's up, man?</div>
+            <div class="me-avatar">
+              <img src="./image/superman.png" alt="..." />
+            </div>
+          </div>
+          <div class="current-chatter-wrapper">
+            <div class="chatter-avatar">
+              <img src="./image/iron.png" alt="..." />
+            </div>
+            <div class="chatter-message container">
+              I would like to invite you to join our super hero party. This
+              event will be held at tomorrow night!
+            </div>
+          </div>
+          <div class="me-wrapper">
+            <div class="me-message container">Thanks, man.</div>
+            <div class="me-avatar">
+              <img src="./image/superman.png" alt="..." />
+            </div>
+          </div>
+          <div class="me-wrapper">
+            <div class="me-message container">
+              I am not sure can make it. Coz i will have dinner with my gf.
+              Best!
+            </div>
+            <div class="me-avatar">
+              <img src="./image/superman.png" alt="..." />
+            </div>
+          </div>
+          <div class="current-chatter-wrapper">
+            <div class="chatter-avatar">
+              <img src="./image/iron.png" alt="..." />
+            </div>
+            <div class="chatter-message container">
+              Alright, maybe see you next time !
+            </div>
+          </div>
+        </div>
+        <div class="user-function">
+          <div class="emoji"><img src="./image/emoji.png" alt="emoji" /></div>
+          <div class="local-file">
+            <label for="user-file-select"
+              ><img src="./image/folder.png" alt="folder"
+            /></label>
+            <input type="file" id="user-file-select" style="display:none" />
+          </div>
+        </div>
+        <div class="user-input">
+          <div
+            id="user-input-value"
+            class="user-text"
+            contenteditable="true"
+          ></div>
+          <div class="btn-send">
+            <button
+              type="button"
+              id="btn-send-message"
+              class="btn btn-outline-success"
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- pop-up window -->
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
